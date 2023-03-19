@@ -25,7 +25,7 @@
 
 ## Step3:  Once completed, access the Jenkins server and Set it up
 #### once completed the publicipaddress:8080 would be pasted to the web and jenkins server is displayed.we then connect to the instance and I sudo cat the /var/lib/jenkins/secrets/initialpassword to display password needed to install jenkins.
-### once its setup i gave the details to set up admin user and i clicked on manage credentials to connect jenkins to aws account by providing my credentials and also github credentials,
+#### once its setup i gave the details to set up admin user and i clicked on manage credentials to connect jenkins to aws account by providing my credentials and also github credentials,
 ## 4. Run the jenkins-pipeline-deploy-to-eks to create Kubernetes Cluster, create deployments and Services
 
 ### I created an eks cluster (an elastic kubernetes cluster) to be able to deploy manifest files.This was created by terraform files which includes:
@@ -38,9 +38,9 @@
 #### nodes.tf: To create the node groups and attach 3 policies for the iam roles which have been declared in this file.
 #### oidc.tf: To create the tls certificate for this cluser
 #### terrafor tfvars and variables.tf: contains declared variables
-### The nginix controller folder contains files used to create nginix
-### The prometheus folder contains files used to create prometheus
-### The Jenkinsfile which gives directives to the jenkins server by giving it a name of what it would do,telling it to go to particular directory and perform a certain action as seen in below
+#### The nginix controller folder contains files used to create nginix
+#### The prometheus folder contains files used to create prometheus
+#### The Jenkinsfile which gives directives to the jenkins server by giving it a name of what it would do,telling it to go to particular directory and perform a certain action as seen in below
 
        stage("Deploy sock-shop to EKS") {
             steps {
@@ -53,13 +53,13 @@
         } 
 
 
-### The jenkins file deployed my manifests file for both sock-app and myvote-app using kubernetes command by asking the shell to run kubectl apply -f (service and deployment file for both applications).I combined my service and deployment files in one file.
-### I created git repository and pushed all the files in there.
-### I then created a new pipeline on the jenkins server,pasted my github url in the url entry space in the jenkins server and built.so it deployed the web application.This is seen in the screenshot below
+#### The jenkins file deployed my manifests file for both sock-app and myvote-app using kubernetes command by asking the shell to run kubectl apply -f (service and deployment file for both applications).I combined my service and deployment files in one file.
+#### I created git repository and pushed all the files in there.
+#### I then created a new pipeline on the jenkins server,pasted my github url in the url entry space in the jenkins server and built.so it deployed the web application.This is seen in the screenshot below
 ![Building-with-jenkins-pipeline](https://github.com/damiogun92/my-pipeline-deployment/blob/main/pipeline-for-exam/images/Screenshot%202023-03-19%20at%2012.19.39.png)
 ## Domain name creation
-### In my AWS it had created the loadbalancer,instance,eks cluster and other resources and on putting the url of my load balancer on the web,it displayed the applications.see image below:
-### I used route 53 to create domain names and used Acm to get my domain name encrypted.
+#### In my AWS it had created the loadbalancer,instance,eks cluster and other resources and on putting the url of my load balancer on the web,it displayed the applications.see image below:
+#### I used route 53 to create domain names and used Acm to get my domain name encrypted.
 
 ## Domain names:sock-shop.damiogun.live and voting.damiogun.live
 
