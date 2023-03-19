@@ -55,7 +55,8 @@
 
 ### The jenkins file deployed my manifests file for both sock-app and myvote-app using kubernetes command by asking the shell to run kubectl apply -f (service and deployment file for both applications).I combined my service and deployment files in one file.
 ### I created git repository and pushed all the files in there.
-### I then created a new pipeline on the jenkins server,pasted my github url in the url entry space in the jenkins server and built.so it deployed the web application.
+### I then created a new pipeline on the jenkins server,pasted my github url in the url entry space in the jenkins server and built.so it deployed the web application.This is seen in the screenshot below
+![Building-with-jenkins-pipeline](https://github.com/damiogun92/my-pipeline-deployment/blob/main/pipeline-for-exam/images/Screenshot%202023-03-19%20at%2012.19.39.png)
 ## Domain name creation
 ### In my AWS it had created the loadbalancer,instance,eks cluster and other resources and on putting the url of my load balancer on the web,it displayed the applications.see image below:
 ### I used route 53 to create domain names and used Acm to get my domain name encrypted.
