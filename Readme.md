@@ -62,5 +62,15 @@
 #### I used route 53 to create domain names and used Acm to get my domain name encrypted.
 
 ## Domain names:sock-shop.damiogun.live and voting.damiogun.live
+### Due to Aws suspending my account after charges incured,I am unable to make a screenshot of the loadbalancer,natgateway,vpc and other resources created.find below a screenshot of my sock-app (which i could not fully load) and voting app because my app got suspended.
+
+![aws-suspension](https://github.com/damiogun92/my-pipeline-deployment/blob/main/pipeline-for-exam/images/AWS-SUSPENSION.PNG)
+
+![sock-app](https://github.com/damiogun92/my-pipeline-deployment/blob/main/pipeline-for-exam/images/SOCK-SHOP.PNG)
+
+![voting-app](https://github.com/damiogun92/my-pipeline-deployment/blob/main/pipeline-for-exam/images/VOTINGAPP.PNG)
+
+
+
 
  
